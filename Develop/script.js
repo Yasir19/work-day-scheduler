@@ -14,21 +14,26 @@ var date = dayName[today.getDay()] + "," + monthName[today.getMonth()] + "," + d
 // using jquery selectors to get the currentDay Id from html and set the content of thr date;
 $("#currentDay").text(date);
 var time = today.getHours();
-if (time>12){
-    time-12 
-}else{
-    time
+if (time > 12){
+    time -= 12;
+}else if (time===0){
+    time=12;
 }
 var AMPM = time >=12 ? 'PM':'AM';
 newTime = time+' '+ AMPM;
 console.log(newTime);
-for (i=0; i<9; i++){
-$("#hours").text(newTime);
-   
-        var timeEl=$("<div>").addClass("p-6 border-top col ").attr("id","hours");
-        var taskEl=$("<textarea>").addClass("p-6 border-top col-lg-10");
-        var btnEl=$("<button>").addClass("saveBtn p-46col");
-        $("#timeBlock").append(timeEl,taskEl,btnEl);
+var timeBlock = function(){
+for (var i =0 ; i<9; i++){
+    $("hours").text(newTime);
+ var timeEl=$("<div>").addClass("p-4 border-top col-lg-2").attr("id", "hours");
+ var taskEl=$("<textarea>").addClass("p-4 border-top col-lg-8");
+ var btnEl=$("<button>").addClass("saveBtn p-4 col-lg-2");
+var rowsEl=$(".row").append(timeEl,taskEl,btnEl);
+ $("#timeBlock").append(rowsEl);
+}
+}
+timeBlock();
+
 
 
   
