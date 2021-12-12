@@ -32,10 +32,10 @@
     </header>
     </div>
     <div class="container" id="timeBlock">
-      <div class="row">
-      <div class="p-4 border-top col-lg-2" id="hours" ></div>
-      <textarea class="p-4 border-top col-lg-8"></textarea> 
-      <button class="saveBtn p-4 col-lg-2"></button>
+      <div class="row time-block">
+      <div class="p-4 border-top col-lg-2" id="hours" >9AM</div>
+      <textarea id="text" class="textarea p-4 border-top col-lg-8"></textarea> 
+      <button id="btn" class="saveBtn p-4 col-lg-2"></button>
       <!-- Timeblocks go here -->
       </div>
     </div>
@@ -45,3 +45,17 @@
     <script src="Develop/script.js"></script>
   </body>
 </html>
+<!-- $("#btn").on("click", "textarea", function(){
+
+});
+var loadTasks = function(){
+
+  };
+
+  $("#text").on("click","p", function(){
+    var text=$(this)
+    .text().trim();
+    var textInput=$("<textarea>").addClass("textarea").vla(text);
+    $(this).replaceWith(textInput)
+    textInput.trigger("focus");
+}); -->

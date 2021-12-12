@@ -20,21 +20,68 @@ if (time > 12){
     time=12;
 }
 var AMPM = time >=12 ? 'PM':'AM';
-newTime = time+' '+ AMPM;
+newTime = time+ AMPM;
 console.log(newTime);
-var timeBlock = function(){
-for (var i =0 ; i<9; i++){
-    $("hours").text(newTime);
- var timeEl=$("<div>").addClass("p-4 border-top col-lg-2").attr("id", "hours");
- var taskEl=$("<textarea>").addClass("p-4 border-top col-lg-8");
- var btnEl=$("<button>").addClass("saveBtn p-4 col-lg-2");
+var arr=["10AM","11AM","12PM","1PM","2PM","3PM","4PM","5PM"];
+for (var i=0;i<arr.length;i++){
+console.log(arr[i]);
+}
+var creatTask = ()=> {
+for (var i =0 ; i < 9; i++){
+ var timeEl=$("<div>").addClass("p-4 border-top col-lg-2 time-block").text(arr[i]);
+ var taskEl=$("<textarea>").addClass(" textarea p-4 border-top col-lg-8");
+ var btnEl=$("<button>").addClass("saveBtn p-4 col-lg-2");;
 var rowsEl=$(".row").append(timeEl,taskEl,btnEl);
  $("#timeBlock").append(rowsEl);
 }
 }
-timeBlock();
-
-
+var currentTime = function(){
+    var getTime = newTime;
+    console.log(getTime);
+    $(".textarea").each(function(){
+        var hr =$("hours").text();
+        var eachHr =parseInt(hr);
+        if (eachHr < getTime){
+            $(this).addClass("past");
+            $(this).removeClass("future");
+            $(this).removeClass("present");
+        }else if (eachHr === getTime ){
+            $(this).addClass("present");
+            $(this).removeClass("future");
+            $(this).removeClass("past");
+        }else{
+            $(this).addClass("future");
+            $(this).removeClass("past");
+            $(this).removeClass("present");
+        }
+    });
+}
 
   
-    
+    var loadTasks = function(){
+        tasks =JSON.parse(localStorage.getItem("tasks"));
+        if(!tasks){
+            tasks ={
+                task:[]
+            };
+        }
+    };
+    var saveTask= function(){
+        localStorage.setItem("tasks",JSON.stringify(tasks));
+    }
+// $("#text").on("click","p", function(){
+//     var text=$(this)
+//     .text().trim();
+//     var textInput=$("<textarea>").addClass("textarea").vla(text);
+//     $(this).replaceWith(textInput)
+//     textInput.trigger("focus");
+// });
+$("#btn").on("click", "textarea", function(){
+ localStorage.setItem("textInput",JSON.stringigy)
+
+});
+loadTasks();
+currentTime();
+creatTask();
+
+
