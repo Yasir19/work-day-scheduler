@@ -30,10 +30,10 @@ https://yasir19.github.io/work-day-scheduler/
 
 ## App pictures
 # Large screen
-![](Assets/Screenlg.png)
+![](Assets/image/Screenlg.png)
 # Medium screen
-![](Assets/Screenmd.png)
+![](Assets/image/Screenmd.png)
 # Phone screen 
-![](Assets/Screenphone.png)
+![](Assets/image/Screenphone.png)
 
 
