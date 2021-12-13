@@ -29,5 +29,11 @@ THEN the saved events persist
 https://yasir19.github.io/work-day-scheduler/
 
 ## App pictures
+# Large screen
+![](Assets/Screen lg.png)
+# Medium screen
+![](Assets/Screen md.png)
+# Phone screen 
+![](Assets/Screen phone.png)
 
-![Screen lg](Assets/Screen lg.png)
+
