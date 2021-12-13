@@ -24,3 +24,10 @@ THEN the saved events persist
 3- the app will highlight the past time with gray color, the present time with red, and the future colored in green 
 4- when the user press the save button the information will be stored locally 
 5- the App will check the time every minute to ensure time change. 
+
+## The App Website
+https://yasir19.github.io/work-day-scheduler/
+
+## App pictures
+
+![Screen lg](./screen lg.png)
