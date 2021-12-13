@@ -30,4 +30,4 @@ https://yasir19.github.io/work-day-scheduler/
 
 ## App pictures
 
-![Screen lg](Assets/screen lg.png)
+![Screen lg](Assets/Screen lg.png)
